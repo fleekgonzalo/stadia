@@ -6,9 +6,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    output: {
-      path: resolve(__dirname, 'dist'),
-      filename: 'my-library.[ext][hash].js',
+    rollupOptions: {
+      input: {
+        wallet: resolve(__dirname, 'src/pages/WalletPage.tsx'),
+      },
     },
   },
 })
