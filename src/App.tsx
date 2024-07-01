@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import {BrowserRouter,Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
 import WalletPage from './pages/WalletPage'
 import NftPage from './pages/NftPage'
@@ -8,14 +8,15 @@ import './App.css'
 function App() {
   
   return (
-    <>    
+    <>   
+    <BrowserRouter> 
     <Routes>
       <Route path="/" element={<Home />} />   
       <Route path="/wallet" element={<WalletPage />} /> 
       <Route path="/nft" element={<NftPage />} /> 
       <Route path="/browse" element={<BrowsePage />} /> 
     </Routes>                   
-      
+    </BrowserRouter>  
     </>
   )
 }
